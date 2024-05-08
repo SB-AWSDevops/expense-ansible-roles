@@ -2,3 +2,5 @@ login_host: db.surisetty.online
 login_password: ExpenseApp@1
 login_user: root
 DB_HOST: db.surisetty.online
+app_location: /app
+component: backend
