@@ -1,6 +1,8 @@
 [db]
 db.surisetty.online
 
+[backend]
+backend.surisetty.online
 
 [all:vars]
 ansible_password=DevOps321
