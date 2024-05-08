@@ -6,3 +6,8 @@ backend.surisetty.online
 
 [frontend]
 surisetty.online
+
+[all]
+db.surisetty.online
+backend.surisetty.online
+surisetty.online
