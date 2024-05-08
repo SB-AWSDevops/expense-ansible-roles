@@ -9,3 +9,6 @@ keyed_groups:
 
 filters:
   tag:Name: "Backend*"
+
+compose:
+  ansible_host: public_ip_address
