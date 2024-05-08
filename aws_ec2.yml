@@ -11,4 +11,4 @@ filters:
   tag:Name: "Backend*"
 
 compose:
-  ansible_host: public_ip_address
+  ansible_host: private_ip_address
