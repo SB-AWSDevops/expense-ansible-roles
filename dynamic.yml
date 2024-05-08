@@ -6,3 +6,18 @@
     ansible.builtin.dnf:
       name: postfix
       state: latest
+
+- name: Retrieve Permissions
+  hosts: all
+  become: yes
+  tasks:
+  - name: Get permissions of all files and directories
+  ansible.builtin.get_permissions:
+    path: "{{ item }}"
+  register: permissions
+  with_fileglob:
+    - "/home/ec2-user/*"  # Specify the path to the directory whose permissions you want to retrieve
+
+- name: Display permissions
+  debug:
+    var: permissions
