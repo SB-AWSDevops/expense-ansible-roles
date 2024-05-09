@@ -29,9 +29,9 @@
     amazon.aws.route53:
       state: present
       zone: "{{ zone }}"
-      record: "{{ item.tags.Name }}.{{ zone }}"
+      record: "{{ item.item }}.{{ zone }}"
       type: A
-      value: "{{ item.public_ip_address }}"
+      value: "{{ item.instances[0].public_ip_address }}"
       overwrite: true
       ttl: 1
     loop: "{{ ec2_instance_info.results }}"
