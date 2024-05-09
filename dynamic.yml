@@ -1,24 +1,8 @@
----
-- name: Retrieve Permissions
-  hosts: all
-  become: yes
-  tasks:
-    - name: Get permissions of all files and directories
-      ansible.builtin.shell:
-        cmd: "stat -c '%a' {{ item }}"
-      register: permissions
-      with_fileglob:
-        - "/home/ec2-user/*"  # Specify the path to the directory whose permissions you want to retrieve
-
-    - name: Display permissions
-      debug:
-        var: permissions
-
 - name: install few packages
-  hosts: all
+  hosts: db
   become: yes
   tasks:
-    - name: install postfix
-      ansible.builtin.dnf:
-        name: postfix
-        state: latest
+  - name: install postfix
+    ansible.builtin.dnf:
+      name: postfix
+      state: latest
