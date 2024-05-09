@@ -29,7 +29,7 @@
     amazon.aws.route53:
       state: present
       zone: "{{ zone }}"
-      record: "{{ item }}.{{ zone }}"
+      record: "{{ item.item }}.{{ zone }}"
       type: A
       value: "{{ item.instance.private_ip_address }}"
       overwrite: true
