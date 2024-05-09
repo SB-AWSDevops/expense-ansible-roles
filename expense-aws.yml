@@ -4,7 +4,7 @@
     zone: surisetty.online
   tasks:
   - name: create ec2 instances
-    amazon.aws.ec2_instance:
+    community.aws.ec2_instance:
       instance_type: t2.micro
       name: "{{ item }}"
       security_group: allow-all
